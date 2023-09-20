@@ -4,12 +4,13 @@ class PascalTriangle {
 
     // run the pascal
     public static void printPascal(int n) {
+
         // spacing
         for (int line = 1; line <= n; line++) {
             for (int j = 0; j <= n - line; j++) {
 
                 // spacing
-                System.out.print("  ");
+                System.out.print("     ");
             }
 
             // used to represent C (line, i)
@@ -17,7 +18,7 @@ class PascalTriangle {
             for (int i = 1; i <= line; i++) {
 
                 // The first value in a line is always 1
-                System.out.print(choose + "   ");
+                System.out.print(choose + "         ");
                 choose = choose * (line - i) / i;
             }
             System.out.println();
@@ -25,6 +26,7 @@ class PascalTriangle {
     }
 
     public static void main(String[] args) {
+
         // initialize n var
         int n;
 
