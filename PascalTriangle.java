@@ -1,34 +1,34 @@
+// Print Pascal's Triangle in Java
+
 class PascalTriangle {
+	public int factorial(int i)
+	{
+		if (i == 0)
+			return 1;
+		return i * factorial(i - 1);
+	}
+	public static void main(String[] args)
+	{
+		int n = 4, i, j;
+		PascalTriangle g = new PascalTriangle();
+		for (i = 0; i <= n; i++) {
+			for (j = 0; j <= n - i; j++) {
 
-    static int factorial(int n) {
+				// for left spacing
+				System.out.print(" ");
+			}
+			for (j = 0; j <= i; j++) {
 
-        int f;
+				// nCr formula
+				System.out.print(
+					" "
+					+ g.factorial(i)
+						/ (g.factorial(i - j)
+							* g.factorial(j)));
+			}
 
-        for (f = 1; n > 1; n--) {
-            f *=n;
-        }
-        return f;
-    }
-
-    static int ncr (int n, int r) {
-        return factorial(n) / (factorial(n - 1) * factorial(r));
-    }
-
-    public static void main(String[] args) {
-        System.out.println();
-        int n;
-        int i;
-        int j;
-        n = 5;
-
-        for (i = 0; i <= n; i++) {
-            for (j = 0; j <= n; j++) {
-                System.out.println(" ");
-            }
-            for (j = 0; j <= n; j++) {
-                System.out.println(" " + ncr(i, j));
-            }
-            System.out.println();
-        }
-    }
+			// for newline
+			System.out.println();
+		}
+	}
 }
