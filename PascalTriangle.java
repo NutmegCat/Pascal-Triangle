@@ -1,3 +1,5 @@
+// Aaron Prince Anu
+
 class PascalTriangle {
 
     // run the pascal
