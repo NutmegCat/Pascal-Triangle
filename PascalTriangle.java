@@ -38,10 +38,6 @@ class PascalTriangle {
                 }
             }
             System.out.println();
-
-            //   for(int x=6; x-s.length()>0;x--) {
-            //     System.out.print(" ");
-            // }
         }
     }
 
