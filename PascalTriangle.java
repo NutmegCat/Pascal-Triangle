@@ -21,6 +21,10 @@ class PascalTriangle {
                 choose = choose * (line - i) / i;
             }
             System.out.println();
+
+            //   for(int x=6; x-s.length()>0;x--) {
+            //     System.out.print(" ");
+            // }
         }
     }
 
