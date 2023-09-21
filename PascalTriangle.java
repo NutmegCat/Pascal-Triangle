@@ -17,8 +17,13 @@ class PascalTriangle {
             for (int i = 1; i <= line; i++) {
 
                 // the first value in a line is always 1
-                System.out.print(choose + "       ");
-                choose = choose * (line - i) / i;
+                if (choose > 9) {
+                    System.out.print(choose + "      ");
+                    choose = choose * (line - i) / i;
+                } else {
+                    System.out.print(choose + "       ");
+                    choose = choose * (line - i) / i;
+            }
             }
             System.out.println();
 
