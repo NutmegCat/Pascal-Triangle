@@ -23,14 +23,14 @@ class PascalTriangle {
                 } else if (1000 > choose && choose > 99) {
                     System.out.print(choose + "     ");
                     choose = choose * (line - i) / i;
-                } else if (choose > 999) {
-                    System.out.println(choose + "    ");
+                } else if (choose > 999 && choose < 10000) {
+                    System.out.print(choose + "    ");
                     choose = choose * (line - i) / i;
                 } else if (choose > 9999) {
-                    System.out.println(choose + "   ");
+                    System.out.print(choose + "   ");
                     choose = choose * (line - i) / i;
                 } else if (choose > 99999) {
-                    System.out.println(choose + "  ");
+                    System.out.print(choose + "  ");
                     choose = choose * (line - i) / i;
                 } else {
                     System.out.print(choose + "       ");
